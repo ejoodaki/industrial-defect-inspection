@@ -1,0 +1,21 @@
+VALIDATION CANDIDATE AGGREGATION AUDIT
+========================================================================
+
+Purpose:
+Compare the frozen baseline using ALL candidates against TOP-5 candidates.
+
+No test data was used.
+No model was retrained.
+No segmentation threshold was tuned.
+
+ mode  TP  FN  TN  FP  defect_recall  healthy_specificity  mean_dice  median_dice  mean_prediction_density  median_prediction_density
+  ALL  49   0   0 418       1.000000             0.000000   0.040873          0.0                 0.058385                   0.017707
+TOP_5  48   1  16 402       0.979592             0.038278   0.081851          0.0                 0.005694                   0.000916
+
+Interpretation
+------------------------------------------------------------------------
+FP change (TOP_5 - ALL): -16
+FN change (TOP_5 - ALL): +1
+Defect recall change: -0.0204
+
+This audit is descriptive and validation-only.
