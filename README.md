@@ -1,6 +1,11 @@
-# KolektorSDD2 Industrial Defect Inspection
+# Industrial AI Visual Inspection System
 
-An end-to-end industrial defect inspection pipeline combining **image preprocessing, multi-scale segmentation, feature engineering, Random Forest decision-making, held-out evaluation, and quantitative failure analysis**.
+An end-to-end computer vision pipeline for detecting and analyzing
+surface defects in industrial images.
+
+Built and evaluated on the KolektorSDD2 dataset.
+
+**Computer Vision • Deep Learning • Image Segmentation • Feature Engineering • Decision Systems • Failure Analysis**
 
 > **Portfolio project:** Built to demonstrate production-oriented AI engineering practices rather than model training alone.
 
