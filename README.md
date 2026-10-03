@@ -77,6 +77,8 @@ The held-out test set remained untouched during model development and threshold 
 
 ## System Architecture
 
+![Industrial AI Visual Inspection Pipeline](architecture.png)
+
 ```text
 Industrial Image
        │
@@ -120,6 +122,36 @@ Healthy / Defective
        ▼
 Quantitative Error Analysis
 ```
+
+---
+
+## Visual Inspection Examples
+
+The repository includes representative examples from the inspection and error-analysis pipeline.
+
+### Defective Example
+
+![Defective inspection example](docs/figures/defective_example.png)
+
+A representative defective sample showing the segmentation-based inspection output.
+
+### Hard-Negative / Candidate Analysis
+
+![Hard negative candidate analysis](docs/figures/hard_negative_example.png)
+
+A hard-negative example used during candidate-level analysis and inspection of false activations.
+
+### False Positive
+
+![False positive example](docs/figures/false_positive_example.png)
+
+A healthy sample incorrectly classified as defective. This type of error is important because it demonstrates false activation originating from the upstream segmentation pipeline.
+
+### False Negative
+
+![False negative example](docs/figures/false_negative_example.png)
+
+A defective sample incorrectly classified as healthy, illustrating a failure case that requires analysis across both segmentation quality and the downstream decision layer.
 
 ---
 
@@ -456,6 +488,15 @@ KolektorSDD2/
 ├── train/
 ├── test/
 ├── splits/
+│
+├── docs/
+│   └── figures/
+│       ├── defective_example.png
+│       ├── false_negative_example.png
+│       ├── false_positive_example.png
+│       └── hard_negative_example.png
+│
+├── architecture.png
 │
 ├── scripts/
 │   ├── dataset audits
